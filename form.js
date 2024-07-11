@@ -173,9 +173,15 @@ const validateInputs = () => {
         }else{
             setSuccess(password);
         }
+
+        // Vérifier si tous les champs sont valides pour afficher un message de succès
+        if (isValidPrenom(prenomValue) && isValidNom(nomValue) && isValidEmail(emailValue) && (passwordValue)) {
+        // Masquer le formulaire
+        document.getElementById('container').style.display = 'none';
+        // Afficher le message de succès
+        document.getElementById('messageSucces').style.display = 'block';
+    }
 };
-
-
 
 
 
